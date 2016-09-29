@@ -3,7 +3,7 @@
 #####   
 # add variable to build.gradle
 #####
-sed -i '1iext.plugins = new File(rootDir, "plugins")' build.gradle
+sed -i '/allprojects/i\ext.plugins = new File(rootDir, "plugins")' build.gradle
 
 #####
 # add apply from some of plugins in allprojects after line.
