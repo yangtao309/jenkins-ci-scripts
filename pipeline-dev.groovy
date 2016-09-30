@@ -43,6 +43,7 @@ parallel(TestNG: {
 }, Jacoco: {
     node {
         echo 'jacoco reports generator'
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '**/jacocoHtml', reportFiles: 'index.html', reportName: 'HTML Report'])
     }
 })
 
