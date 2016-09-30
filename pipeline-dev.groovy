@@ -47,7 +47,7 @@ parallel(TestNG: {
         sh 'sh reset-build-gradle.sh'
         sh 'gradle clean test'
         echo 'jacoco reports generator'
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '**/jacocoHtml', reportFiles: 'index.html', reportName: 'HTML Report'])
+    	publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/jacocoHtml', reportFiles: 'index.html', reportName: 'Jacoco HTML Report'])
     }
 })
 
