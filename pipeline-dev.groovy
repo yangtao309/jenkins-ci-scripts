@@ -1,7 +1,6 @@
 #!groovy
 
 // dev environment pipeline settings
-def do() {
 stage('Code Quality')
 node { echo 'code quality execute' }
 parallel(CheckStyle: {
@@ -46,6 +45,4 @@ parallel(TestNG: {
         echo 'jacoco reports generator'
     }
 })
-
-}
 
