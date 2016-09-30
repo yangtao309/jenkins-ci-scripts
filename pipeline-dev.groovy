@@ -1,9 +1,6 @@
 #!groovy
 
-#####
-# dev environment pipeline settings
-####
-
+// dev environment pipeline settings
 def do() {
 stage('Code Quality')
 node { echo 'code quality execute' }
