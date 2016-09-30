@@ -42,6 +42,10 @@ parallel(TestNG: {
     }
 }, Jacoco: {
     node {
+	checkout scm
+        unstash 'scripts'
+        sh 'sh reset-build-gradle.sh'
+        sh 'gradle clean test'
         echo 'jacoco reports generator'
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '**/jacocoHtml', reportFiles: 'index.html', reportName: 'HTML Report'])
     }
